@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>user page</title>
+</head>
+<body>
+<table class="table table-hover">
+    <thead>
+    <th class="active">id</th>
+    <th class="active">用户名</th>
+    <th class="active">密码</th>
+    </thead>
+    <tbody>
+    {% for user in users %}
+    <!-- tr -->
+    <tr class="success">
+        <tr class="info">
+        <td>{{ user._id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.passwd }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
