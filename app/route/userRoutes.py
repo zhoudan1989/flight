@@ -23,5 +23,5 @@ def insertuser(name):
     u.name = name
     u.passwd = request.values["passwd"]#request.args  request.from
     #UserService.insert(u)
-    getattr(getattr(import_class("app.mongo.userService"),"UserService"),"insert")(u)
+    getattr(import_class("app.mongo.userService.UserService"),"insert")(u)
     return "ok"

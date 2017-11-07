@@ -1,4 +1,10 @@
 import configparser
 
-cfg = configparser.ConfigParser()
-cfg.read("cfg.ini")
+
+class fligtConfig:
+    def __init__(self):
+        cfg = configparser.ConfigParser()
+        cfg.read("cfg.ini")
+
+
+cfg = fligtConfig()
