@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>user page</title>
+    <title>user page</title>
 </head>
 <body>
 <table class="table table-hover">
@@ -11,13 +11,13 @@
     </thead>
     <tbody>
     {% for user in users %}
-    <!-- tr -->
-    <tr class="success">
+        <!-- tr -->
+        <tr class="success">
         <tr class="info">
-        <td>{{ user._id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.passwd }}</td>
-    </tr>
+            <td>{{ user._id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.passwd }}</td>
+        </tr>
     {% endfor %}
     </tbody>
 </table>

@@ -1,10 +1,10 @@
 <html>
 <head>
-<title>user page</title>
+    <title>user page</title>
 </head>
 <body>
 <div id="chart" style="width: 800px;float: left">
-    <embed type="image/svg+xml" src= {{ chart.render_data_uri()|safe }} />
+    <embed type="image/svg+xml" src={{ chart.render_data_uri()|safe }}/>
 </div>
 </body>
 </html>

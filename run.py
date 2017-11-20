@@ -1,5 +1,5 @@
-from app.route import app
 from app.config.cfg import cfg
+from app.route import app, socketio
 
 if __name__ == '__main__':
-    app.run(port=cfg.getint("flask","port"))
+    socketio.run(app, port=cfg.getint("flask", "port"))

@@ -7,7 +7,7 @@ from app.vo.user import user
 from . import app
 
 
-@app.route('/user/<name>',methods=['GET', 'POST'])
+@app.route('/user/<name>', methods=['GET', 'POST'])
 def finduser(name):
     if request.method == "GET":
         return jsonEncoder().encode(UserService.find(name))
@@ -21,7 +21,7 @@ def finduser(name):
 def insertuser(name):
     u = user()
     u.name = name
-    u.passwd = request.values["passwd"]#request.args  request.from
-    #UserService.insert(u)
-    getattr(import_class("app.mongo.userService.UserService"),"insert")(u)
+    u.passwd = request.values["passwd"]  # request.args  request.from
+    # UserService.insert(u)
+    getattr(import_class("app.mongo.userService.UserService"), "insert")(u)
     return "ok"

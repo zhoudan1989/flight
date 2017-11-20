@@ -1,5 +1,5 @@
-from . import db
 from app.vo.user import user
+from . import db
 
 
 class UserService:
